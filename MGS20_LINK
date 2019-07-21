@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Metal Gear</title>
+  </head>
+  <body>
+    <h1>Este es el Metal Gear que podrias manejar.</h1>
+  </body>
+  <script>
+    let codex = prompt ('¿Con que animal te sientes representado? \n Escribe el numero: (1) Perro, (2) Lobo, (3) Serpiente, (4) Gato o (5) Águila.');
+    codex = parseInt(codex, 10);
+    console.log ("Gracias por la enseña Link Strifer ^^")
+    
+    const gear = {
+      1: {
+        name : 'Rex.',
+        type :'Tanque bípedo con armas nucleares.',
+        origin : 'Estados Unidos.',
+        games : 'Metal Gear Solid, Metal Gear Solid 2: Sons of Liberty y Metal Gear Solid 4: Guns of the Patriots.',
+        img : 'https://i.imgur.com/M3akNSv.jpg',
+      },
+      2: {
+        name : 'Shagohod',
+        type : 'Tanque bípedo con armas nucleares',
+        origin : 'Unión Soviética.',
+        games : 'Metal Gear Solid 3: Snake Eater',
+        img : 'https://i.imgur.com/FB0Jbgx.jpg',
+      },
+      3: {
+        name : 'Sahelanthropus',
+        type : 'Sistema de armas antropoideo bípedo.',
+        origin : 'Unión Soviética.',
+        games : 'Metal Gear Solid V: The Phantom Pain.',
+        img : 'https://i.imgur.com/dDn7euA.jpg',
+      },
+      4:{
+        name : 'Peace Walker.',
+        type : 'Tanque bípedo inteligente de respuesta automática.',
+        origin : 'Estados Unidos.',
+        games : 'Metal Gear Solid: Peace Walker',
+        img : 'https://i.imgur.com/E1AVJp2.jpg',
+      },
+      5:{
+        name : 'Ray',
+        type : 'Tanque anfibio bípedo',
+        origin : 'Estados Unidos.',
+        games : 'Metal Gear Solid 2: Sons of Liberty y Metal Gear Solid 4: Guns of the Patriots.',
+        img : 'https://i.imgur.com/nDpDOdG.jpg',
+      },
+    };
+    const game = gear[codex] || {};
+    document.write (`<img src="${game.img || ''}" /> <br> <h3> Tu Metal Gear es ${game.name || ''}</h3> <br> <strong> Tipo: </strong> ${game.type || ''}  <br> <strong> Origen:</strong> ${game.origin || ''} <br> <strong>Juego: </strong> ${game.games || ''} `);
+  </script>
+  <br>
+  <p>Espero que te haya gustado. </p>
+</html>
